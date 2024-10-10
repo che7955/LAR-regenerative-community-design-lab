@@ -16,14 +16,17 @@
             color: white;
             padding: 10px 20px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
         }
         .logo {
             height: 50px;
+            margin-bottom: 10px;
         }
         .nav-buttons {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 10px;
         }
         .nav-button {
@@ -33,6 +36,7 @@
             padding: 10px 20px;
             cursor: pointer;
             font-weight: bold;
+            text-decoration: none;
         }
         .content {
             background-color: #C6BBA6;
@@ -73,12 +77,26 @@
             background-color: #f0f0f0;
             padding: 20px;
             margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
         }
         .project-title, .project-funding {
-            flex-basis: 48%;
-            font-size: large;
+            margin-bottom: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .logo {
+                margin-bottom: 0;
+            }
+            .project-info {
+                display: flex;
+                justify-content: space-between;
+            }
+            .project-title, .project-funding {
+                flex-basis: 48%;
+            }
         }
     </style>
 </head>
@@ -97,8 +115,8 @@
         <div class="gallery-container">
             <div class="gallery">
                 <img src="media/homepage.png" alt="Project Design 1">
-                <img src="media/homepage2.png" alt="Project Design 2">
-                <img src="media/homepage3.jpg" alt="Project Design 3">
+                <img src="media/homepage.png" alt="Project Design 2">
+                <img src="media/homepage.png" alt="Project Design 3">
             </div>
             <a href="#" class="gallery-nav prev">&lt;</a>
             <a href="#" class="gallery-nav next">&gt;</a>
