@@ -16,14 +16,17 @@
             color: white;
             padding: 10px 20px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
         }
         .logo {
             height: 50px;
+            margin-bottom: 10px;
         }
         .nav-buttons {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 10px;
         }
         .nav-button {
@@ -41,15 +44,14 @@
             padding: 20px;
             background-color: #C6BBA6;
             display: flex;
+            flex-direction: column;
             gap: 20px;
         }
         .message {
-            flex: 1;
             background-color: #f0f0f0;
             padding: 20px;
         }
         .image-section {
-            flex: 1;
             display: flex;
             flex-direction: column;
         }
@@ -72,6 +74,22 @@
             font-weight: bold;
             font-size: 16px;
         }
+
+        @media (min-width: 768px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .logo {
+                margin-bottom: 0;
+            }
+            .content {
+                flex-direction: row;
+            }
+            .message, .image-section {
+                flex: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -88,7 +106,7 @@
     <main class="content">
         <div class="message">
             <h2>Support Our Cause</h2>
-            <p> Project funding provided in part by the Rhode Island Department of Environmental Management,Urban and Community Forestry Program, and a Coastal Fellowship through the University of Rhode Island College of Environment Life Sciences, in cooperation with the URI Regenerative CommunityDesign Lab in the Department of Landscape Architecture Program. <br> <br> And through your generous contribution will help us continue our important work in community development and environmental protection. Every donation, no matter the size, makes a significant impact on our projects and the communities we serve.</p>
+            <p>Project funding provided in part by the Rhode Island Department of Environmental Management, Urban and Community Forestry Program, and a Coastal Fellowship through the University of Rhode Island College of Environment Life Sciences, in cooperation with the URI Regenerative Community Design Lab in the Department of Landscape Architecture Program. <br> <br> Your generous contribution will help us continue our important work in community development and environmental protection. Every donation, no matter the size, makes a significant impact on our projects and the communities we serve.</p>
         </div>
         <div class="image-section">
             <img src="media/donatepage.jpg" alt="Our Team" class="team-image">
